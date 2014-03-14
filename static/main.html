@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Whirl</title>
+<script src="/static/jquery-2.1.0.min.js"></script>
+</head>
+<body>
+<div>
+ <label for="url">URL:</label> <input id="url" name="url" type="text" /> <button id="go_button">Go!</button> <br/>
+ <div style="border: 1px solid black;">
+ <label for="h_host">Host:</label> <input id="h_host" name="h_host" type="text" /> <br/>
+ </div>
+</div>
+<div id="output">
+<div id="left">iframe</div>
+<div id="right">outputty</div>
+</div>
+<script>
+
+$(function(){
+    console.log('loading Whirl...');
+    $('#go_button').bind('click', function(){
+        console.log('clicked');
+    });
+});
+</script>
+</body>
+</html>
