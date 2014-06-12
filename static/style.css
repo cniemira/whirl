@@ -1,0 +1,113 @@
+#content {
+    border: 1px solid black;
+    height: 100%; width: 800px;
+    min-height: 600px;
+    margin: 0; padding: 0;
+}
+#content_footer {
+    font: Courier;
+    font-size: 10pt;
+    text-align: center;
+}
+#content_length {
+    display: inline;
+    float: left;
+}
+#content_load {
+    display: inline;
+}
+#content_size {
+    display: inline;
+    float: right;
+}
+#content_raw {
+    font-family: Courier;
+    font-size: 10pt;
+    margin: 10px 0px; padding: 0px;
+    width: 800px;
+}
+#content_raw div {
+    cursor: pointer;
+}
+#content_raw pre {
+    border-top: 1px solid black;
+    display: none;
+    margin: 6px 0px; padding: 6px 0px;
+    white-space: pre-wrap;
+    width: 800px;
+}
+
+#meta {
+    margin: 0px; padding: 0px;
+    overflow: scroll;
+    max-height: 100%; width: 100%;
+}
+#meta div {
+    border: 1px solid black;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    font-family: Courier;
+    font-size: 12pt;
+    margin: 0px; padding: 10px;
+}
+#meta div:nth-child(even) {
+    margin: 10px 0px;
+}
+#meta div pre:first-of-type {
+    cursor: pointer;
+}
+#meta div pre {
+    display: block;
+    margin: 2px 0px; padding: 0;
+    white-space: pre-wrap;
+}
+#meta div.network_io {
+    background-color: #ccc;
+}
+#meta div.certificate {
+    background-color: #cfc;
+}
+#meta div.certificate pre:not(:first-of-type) {
+    border: 1px solid white;
+    margin: 20px 0px; padding: 10px;
+}
+
+#opt_inputs {
+    border: 1px solid black;
+    display: none;
+}
+
+/* Master Layout */
+html, body {
+    margin: 0px; padding: 0px;
+    height: 100%; width: 100%;
+}
+#input, #output {
+    margin: 10px 0px; padding: 10px;
+}
+
+#input {
+    background-color: #eee;
+    min-width: 1600px;
+}
+#output {
+    min-height: 100%;
+    padding-right: 820px;
+    overflow: hidden;
+}
+
+#left {
+    float: left;
+    margin: 0px; padding: 0px;
+    width: 800px;
+}
+#right {   
+    float: right; 
+    margin: 0 -810px 0 auto; padding: 0px;
+    min-width: 780px;
+    overflow-y: scroll;
+    width: 100%;
+}
+
+

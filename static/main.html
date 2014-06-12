@@ -3,25 +3,52 @@
 <html>
 <head>
 <title>Whirl</title>
-<script src="/static/jquery-2.1.0.min.js"></script>
+<meta charset="utf-8"/>
+<script src="/static/jquery-1.11.0.min.js"></script>
+<script src="/static/jquery.iframe.js"></script>
+<script src="/static/whirl.js"></script>
+<style type="text/css" media="screen">@import "/static/style.css";</style>
 </head>
 <body>
+<div id="input">
 <div>
- <label for="url">URL:</label> <input id="url" name="url" type="text" /> <button id="go_button">Go!</button> <br/>
- <div style="border: 1px solid black;">
- <label for="h_host">Host:</label> <input id="h_host" name="h_host" type="text" /> <br/>
- </div>
+    <label for="url">URL:</label>
+    <input id="url" name="url" type="text" class="param" value="https://dev.siege.org/whirl/"/>
+    <button id="go_button">Go!</button>
+    <button id="show_options">Options</button>
+</div>
+<div id="opt_inputs">
+    <div>
+        <label for="h_host">Host:</label>
+        <input id="h_host" name="h_host" type="text" class="param" />
+    </div>
+    <div>
+        <label for="h_useragent">User-Agent:</label>
+        <input id="h_useragent" name="h_useragent" type="text" class="param" value="" />
+    </div>
+</div>
 </div>
 <div id="output">
-<div id="left">iframe</div>
-<div id="right">outputty</div>
+    <div id="left">
+        <iframe id="content"></iframe>
+        <div id="content_footer">
+            <span id="content_length"></span>
+            <span id="content_load"></span>
+            <span id="content_size">800x600</span>
+            <div>Note: Javascript heavy sites will not function properly.</div>
+        </div>
+        <div id="content_raw"></div>
+    </div>
+    <div id="right"><div id="meta"></div></div>
 </div>
 <script>
-
 $(function(){
     console.log('loading Whirl...');
     $('#go_button').bind('click', function(){
-        console.log('clicked');
+        Whirl.run();
+    });
+    $('#show_options').bind('click', function(){
+        $('#opt_inputs').toggle();
     });
 });
 </script>
