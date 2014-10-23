@@ -1,4 +1,4 @@
-#!env python
+#!/usr/bin/env python
 import calendar
 import json
 import lxml.html
